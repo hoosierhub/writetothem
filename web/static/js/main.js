@@ -15,4 +15,10 @@ $(function() {
     });
 
     $('.js-fixed-thead').fixedThead();
+
+    $('.js-contact-options-accordion').each(function(){
+        $(this).find('h3').on('click', function(){
+            $(this).parents('.contact-option').toggleClass('contact-option--active');
+        });
+    });
 });

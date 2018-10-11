@@ -1,0 +1,65 @@
+.contact-options {
+    @media #{$medium} {
+        margin-right: 10%;
+    }
+}
+
+.contact-option {
+    border-top: 1px solid darken($content-background-colour, 10%);
+    border-bottom: 1px solid darken($content-background-colour, 10%);
+
+    h3 {
+        font-weight: inherit;
+        margin: 0;
+        padding: 1em 0;
+        font-size: 1.3em;
+        line-height: 1.2;
+
+        // Make it look clickable
+        .js & {
+            color: $link-color;
+            cursor: pointer;
+            padding: 1em;
+
+            &:hover, &:focus {
+                color: #333
+            }
+        }
+
+        small {
+            display: block;
+            color: inherit;
+            font-size: 0.7em;
+            line-height: 1.3;
+        }
+    }
+
+    & + .contact-option {
+        border-top: none;
+    }
+
+    & + .contact-option--active {
+        margin-top: -1px;
+        border-top: 1px solid darken($content-background-colour, 10%);
+    }
+}
+
+.contact-option--active {
+    background-color: #fff;
+    border: 1px solid darken($content-background-colour, 10%);
+}
+
+.contact-option__detail {
+    .js & {
+        display: none;
+    }
+
+    .js .contact-option--active & {
+        display: block;
+        padding: 0 1.3em 1.3em 1.3em
+    }
+
+    & > :last-child {
+        margin-bottom: 0;
+    }
+}
