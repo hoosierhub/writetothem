@@ -68,6 +68,7 @@ my ($wth, $action, $verbose, $pause, $multispawn) = mySociety::WebTestHarness::s
     actions => \@actions,
     actions_desc => \%actions_desc,
     dbname => 'FYR_QUEUE',
+    db_encoding => 'SQL_ASCII',
     no_validate_html => 1,
 });
 $multispawn = 2;
